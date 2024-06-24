@@ -1,0 +1,18 @@
+# alternate way of writing configurations of application.properties file
+# In case, same properties are written in both .properties and .yml files, then priority will be given to .properties file.
+
+spring:
+  data:
+    mongodb:
+      # when working with mongodb server on cloud
+      uri: mongodb+srv://omgolhani:omgolhani@atlascluster.jayzzhx.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster
+      database: journaldb
+      auto-index-creation: true
+      # when working with local mongodb server
+      # port: 27017
+      # host: localhost
+  main:
+    allow-circular-references: true
+
+server:
+  port: 8080
